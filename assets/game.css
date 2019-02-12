@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 1fr 800 1fr;
+	grid-template-rows: 1fr 600 1fr;
+}
+
+.jeff {
+	color: #00ff00;
+}
+
+canvas {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+
+h1 {
+	grid-column-start: 2;
+	grid-row-start: 1;
+	text-align: center;
+	justify-content: center;
+}
+
+header {
+	display: grid;
+	grid-row-start: 1;
+	height: 60px;
+	grid-column: 1/4;
+	background-color: #004444;
+	justify-content: center;
+}

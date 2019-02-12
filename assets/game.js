@@ -26,20 +26,17 @@ var game = new Phaser.Game(config);
 function preload ()
 {
 this.load.image('scrollingSkyBkg', './assets/images/blueSky01.jpg');
-this.load.spritesheet('ball',
-  'assets/images/ball.png',
-  { frameWidth: 50, frameHeight: 50 }
-);
+this.load.spritesheet('ball','assets/images/ball.png',
+{ frameWidth: 50, frameHeight: 50 });
 this.load.image('star', 'assets/images/star.png');
-//	this.add.sprite('object', 'assets/ball.png', {frameWidth: 50, frameHeight: 50})
 this.load.image('purple_brick', "./assets/puzzlepack/png/element_purple_rectangle.png")
-
+this.load.spritesheet('green_bird', 'assets/images/birds/greenBird.png', { frameWidth: 80, frameHeight: 78});
 }
 
-function create ()
-{
+function create () {
 scrollingSkyBkg = this.add.tileSprite(400, 300, 800, 600, 'scrollingSkyBkg');
 player = this.physics.add.sprite(400, 300, 'ball');
+greenBird = this.physics.add.sprite(400, 300, 800, 600, 'green_bird');
 star = this.physics.add.group({
 key: 'star',
 repeat: 21,
